@@ -1,0 +1,140 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="ReminderApp.Home.HomePage"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+    xmlns:dailyview="clr-namespace:ReminderApp.DailyView"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:renderedViews="clr-namespace:Sharpnado.MaterialFrame;assembly=Sharpnado.MaterialFrame"
+    xmlns:sh="clr-namespace:Sharpnado.Shades;assembly=Sharpnado.Shadows"
+    BackgroundColor="Black"
+    mc:Ignorable="d">
+    <ContentPage.Content>
+        <Grid>
+
+
+            <dailyview:DailyPage Padding="0,100,0,0" />
+            <Grid
+                Padding="20,5,20,0"
+                ColumnDefinitions="*,*,*,*,*"
+                HorizontalOptions="FillAndExpand"
+                RowDefinitions="*,*,*"
+                VerticalOptions="EndAndExpand">
+                <renderedViews:MaterialFrame
+                    Grid.Row="1"
+                    Grid.RowSpan="2"
+                    Grid.ColumnSpan="5"
+                    Margin="-20,-5,-20,0"
+                    Padding="16,10"
+                    AcrylicGlowColor="White"
+                    CornerRadius="0"
+                    Elevation="4"
+                    MaterialBlurStyle="ExtraLight"
+                    MaterialTheme="AcrylicBlur"
+                    VerticalOptions="FillAndExpand" />
+                <Image
+                    Grid.Row="1"
+                    HeightRequest="20"
+                    HorizontalOptions="Center"
+                    Source="List.png"
+                    VerticalOptions="Center"
+                    WidthRequest="20" />
+                <Image
+                    Grid.Row="1"
+                    Grid.Column="1"
+                    HeightRequest="20"
+                    HorizontalOptions="Center"
+                    Source="Clock.png"
+                    VerticalOptions="Center"
+                    WidthRequest="20" />
+                <sh:Shadows
+                    Grid.Row="0"
+                    Grid.RowSpan="2"
+                    Grid.Column="2"
+                    CornerRadius="60"
+                    IsVisible="true"
+                    Shades="{sh:SingleShade Color=#5B3E96,
+                                            Opacity=.4,
+                                            BlurRadius=100,
+                                            Offset='3,13'}"
+                    VerticalOptions="Center">
+
+                    <Button
+                        Padding="0"
+                        BackgroundColor="#5B3E96"
+                        CornerRadius="60"
+                        FontFamily="RBold"
+                        FontSize="36"
+                        HeightRequest="60"
+                        HorizontalOptions="Center"
+                        Text=""
+                        VerticalOptions="Center"
+                        WidthRequest="60" />
+                </sh:Shadows>
+                <Rectangle
+                    Grid.Row="0"
+                    Grid.RowSpan="2"
+                    Grid.Column="2"
+                    Fill="White"
+                    HeightRequest="26"
+                    HorizontalOptions="Center"
+                    RadiusX="20"
+                    RadiusY="20"
+                    VerticalOptions="Center"
+                    WidthRequest="4" />
+                <Rectangle
+                    Grid.Row="0"
+                    Grid.RowSpan="2"
+                    Grid.Column="2"
+                    Fill="White"
+                    HeightRequest="4"
+                    HorizontalOptions="Center"
+                    RadiusX="20"
+                    RadiusY="20"
+                    VerticalOptions="Center"
+                    WidthRequest="26" />
+
+
+
+                <Image
+                    Grid.Row="1"
+                    Grid.Column="3"
+                    HeightRequest="20"
+                    HorizontalOptions="Center"
+                    Source="Bell.png"
+                    VerticalOptions="Center"
+                    WidthRequest="20" />
+                <Image
+                    Grid.Row="1"
+                    Grid.Column="4"
+                    Aspect="AspectFit"
+                    HeightRequest="20"
+                    HorizontalOptions="Center"
+                    Source="Man.png"
+                    VerticalOptions="Center"
+                    WidthRequest="20" />
+                <BoxView
+                    Grid.Row="2"
+                    Grid.ColumnSpan="5"
+                    BackgroundColor="Black"
+                    CornerRadius="30"
+                    HeightRequest="3"
+                    HorizontalOptions="Center"
+                    VerticalOptions="Center"
+                    WidthRequest="140" />
+
+            </Grid>
+            <Label
+                Padding="40"
+                FontAttributes="Bold"
+                FontFamily="RBold"
+                FontSize="30"
+                HorizontalOptions="CenterAndExpand"
+                Text="TTD"
+                TextColor="White"
+                VerticalOptions="Start" />
+
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>
